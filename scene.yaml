@@ -1,0 +1,40 @@
+- position: [0, 0]
+  velocity: [0, 0]
+  radius: 17 
+  mass: 400
+  color: [255, 217, 62, 255]
+
+- position: [190, 0]
+  velocity: [0, 12]
+  radius: 5
+  mass: 2
+  color: [72, 189, 230, 255]
+- position: [177, 0]
+  velocity: [0, 15]
+  radius: 2
+  mass: 0.2
+  color: [172, 189, 240, 255]
+
+- position: [-600, 0]
+  velocity: [0, -6.5]
+  radius: 7
+  mass: 12 
+  color: [255, 0, 255, 255]
+- position: [-570, 0]
+  velocity: [0, -11.5]
+  radius: 2
+  mass: 0.4 
+  color: [80, 80, 255, 255]
+
+- position: [-75, 35]
+  velocity: [8, 12]
+  radius: 3
+  mass: 1 
+  color: [0, 0, 255, 255]
+    
+- position: [-37, 0]
+  velocity: [0, -37.4]
+  radius: 2
+  mass: 0.2
+  color: [0, 0, 255, 255]
+  type: "comet"
