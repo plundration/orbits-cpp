@@ -14,9 +14,10 @@
 #include "serialiser.hh"
 #include "math.hh"
 
-#define SCREEN_WIDTH (1200)
-#define SCREEN_HEIGHT (1200)
 #define WINDOW_TITLE "Orbits"
+
+int SCREEN_WIDTH;
+int SCREEN_HEIGHT;
 
 const int POINT_COUNT = 8000;
 const int PAST_POINT_COUNT = 700;
@@ -41,6 +42,8 @@ int main()
     // Seed random number generator
     srand(time(0));
 
+    SCREEN_WIDTH = 1500;
+    SCREEN_HEIGHT = 850;
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, WINDOW_TITLE);
     SetTargetFPS(60);
     
@@ -205,7 +208,7 @@ void updateBodies(vector<CelestialBody>& bodies, float time) {
 
             Vector2 acceleration_per_mass = to_i*G/dist_sq;
             
-            body_i.velocity = body_i.velocity + acceleration_per_mass*body_j.mass*time;
+            body_i.velocity = body_i.velocity - acceleration_per_mass*body_j.mass*time;
             body_j.velocity = body_j.velocity + acceleration_per_mass*body_i.mass*time;
         }
         
@@ -236,7 +239,7 @@ void updateFuturePath(vector<CelestialBody>& bodies, States &futurePoints, float
 
             Vector2 acceleration_per_mass = to_i*G/dist_sq;
             
-            body_i_last.velocity = body_i_last.velocity + acceleration_per_mass*body_j_last.mass*time;
+            body_i_last.velocity = body_i_last.velocity - acceleration_per_mass*body_j_last.mass*time;
             futurePoints.v[j][lastPoint] = body_j_last.velocity + acceleration_per_mass*body_i_last.mass*time;
         }
         

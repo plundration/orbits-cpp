@@ -38,3 +38,9 @@
   mass: 0.2
   color: [0, 0, 255, 255]
   type: "comet"
+
+- position: [-1100, -1100]
+  velocity: [2, 0]
+  radius: 22
+  mass: 95
+  color: [255, 150, 150, 255]
